@@ -191,16 +191,17 @@ const content = {
 
   faq: null,
 
-  contact: {
+ contact: {
     heading: "Is your growth stuck?",
     subheading: "Let's find out what's holding it back. Pick a convenient time and book a focused growth conversation.",
     primaryCta: "Open Calendly →",
-    email: "thegrowthsurgeon.com",
+    email: "thegrowthsurgeon.co.in", 
     phone: "+91 82797 17992",
     whatsappNumber: "918279717992",
     whatsappMessage: "Hi Sumit, found you via thegrowthsurgeon.co.in — I'd like to talk about our sales growth.",
     calendlyUrl: "https://calendly.com/thegrowthsurgeon-uchx/30min",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/the-growth-surgeon",
+    instagram: "https://www.instagram.com/the.growth.surgeon?igsh=bmVzZXNyODI2azE0&utm_source=qr",
     footerNote: "Sales Growth · Sales Teams · GTM · Revenue Growth Systems",
   },
 

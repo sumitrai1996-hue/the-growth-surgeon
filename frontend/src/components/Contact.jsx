@@ -36,19 +36,21 @@ export default function Contact() {
         <div>
           <h2 className="section-heading">{c.heading}</h2>
           <p className="section-sub">{c.subheading}</p>
- <div className="profile-calendly">
-  <img src="/profile3.jpeg" alt="Sumit" className="contact-photo" />
-  <div className="calendly-cta">
-    <span className="calendly-cta-text">Book a 45 min slot</span>
-    <a href={c.calendlyUrl} className="btn btn-primary" target="_blank" rel="noreferrer">
-      {c.primaryCta}
-    </a>
-  </div>
-</div>
+              <div className="profile-calendly">
+                <img src="/profile3.jpeg" alt="Sumit" className="contact-photo" />
+                <div className="calendly-cta">
+                  <span className="calendly-cta-text">Book a 45 min slot</span>
+                  <a href={c.calendlyUrl} className="btn btn-primary" target="_blank" rel="noreferrer">
+                    {c.primaryCta}
+                  </a>
+                </div>
+              </div>
           <div className="contact-links">
             <a href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a>
             <a href={whatsappHref} target="_blank" rel="noreferrer">WhatsApp</a>
             <a href={`mailto:${c.email}`}>{c.email}</a>
+            <a href={c.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={c.instagram} target="_blank" rel="noreferrer">Instagram</a>
           </div>
 
           <p className="contact-footnote">{c.footerNote}</p>
