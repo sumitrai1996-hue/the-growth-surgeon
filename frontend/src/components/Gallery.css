@@ -1,0 +1,36 @@
+.gallery-banner {
+  margin: 0;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-banner img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: grayscale(0.25) contrast(1.05);
+}
+
+.gallery-banner figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 44px 28px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  background: linear-gradient(to top, rgba(6, 12, 24, 0.92) 0%, rgba(6, 12, 24, 0) 100%);
+}
+
+@media (max-width: 720px) {
+  .gallery-banner img {
+    aspect-ratio: 4 / 5;
+    object-position: top center;
+  }
+}

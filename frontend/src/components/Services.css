@@ -1,0 +1,130 @@
+.ladder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.ladder-step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 28px 28px;
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ladder-step:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg);
+}
+
+.ladder-step:last-child {
+  border-color: var(--border);
+  background: var(--bg-elevated);
+}
+
+.ladder-step-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ladder-step-num {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.ladder-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: var(--accent-gradient);
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px -4px rgba(20, 80, 224, 0.45);
+}
+
+.ladder-step h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.ladder-duration {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-bottom: 20px;
+}
+
+.ladder-step ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.ladder-step li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ladder-step li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+}
+
+.ladder-price {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.ladder-price-value {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--accent-bright);
+}
+
+.ladder-price-note {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+
+.ladder-aligned {
+  margin-top: 32px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 960px) {
+  .ladder {
+    grid-template-columns: 1fr;
+  }
+  .ladder-step {
+    margin-top: 0 !important;
+  }
+}
