@@ -89,4 +89,7 @@
     padding-left: 0;
     border-left: none;
   }
+  .timeline-item:not(:first-child) .timeline-dot {
+  display: none;
+}
 }

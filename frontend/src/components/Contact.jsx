@@ -3,6 +3,13 @@ import content from "../data/content.js";
 import useReveal from "../hooks/useReveal.js";
 import "./Contact.css";
 
+// In local dev this is empty, so fetch("/api/contact") goes through the Vite
+// proxy to the backend on :4000 (see vite.config.js). In production
+// (GitHub Pages can only serve static files — it can't run a backend), set
+// VITE_API_URL to your deployed backend's URL, e.g.
+// https://your-backend.onrender.com, so the form posts there instead.
+const API_BASE = import.meta.env.VITE_API_URL || "";
+
 export default function Contact() {
   const c = content.contact;
   const ref = useReveal();
@@ -15,7 +22,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${API_BASE}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

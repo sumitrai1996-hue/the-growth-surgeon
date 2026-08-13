@@ -7,9 +7,22 @@ import contactRouter from "./routes/contact.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
+// Comma-separated list, e.g. "https://thegrowthsurgeon.co.in,https://username.github.io"
+const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((o) => o.trim())
+  .filter(Boolean);
 
-app.use(cors({ origin: FRONTEND_ORIGIN }));
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || FRONTEND_ORIGINS.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`Origin ${origin} not allowed by CORS`));
+    },
+  })
+);
 app.use(express.json());
 
 // Basic protection against form-spam / abuse
