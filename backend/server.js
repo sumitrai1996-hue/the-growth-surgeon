@@ -6,6 +6,7 @@ import rateLimit from "express-rate-limit";
 import contactRouter from "./routes/contact.js";
 
 const app = express();
+app.set("trust proxy", 1);
 const PORT = process.env.PORT || 4000;
 // Comma-separated list, e.g. "https://thegrowthsurgeon.co.in,https://username.github.io"
 const FRONTEND_ORIGINS = (process.env.FRONTEND_ORIGIN || "http://localhost:5173")
