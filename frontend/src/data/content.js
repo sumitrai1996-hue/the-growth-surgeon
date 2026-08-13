@@ -39,7 +39,7 @@ const content = {
     secondaryCta: "See what I do",
     stats: [
       { value: "10+ Years", label: "Sales & Business Development leadership" },
-      { value: "5 → 1000+", label: "team scale experience" },
+      { value: "0 → 1000+", label: "team scale experience" },
       { value: "₹25K → ₹20L", label: "daily collection scale-up experience" },
       { value: "2500+", label: "field force operations experience" },
     ],
@@ -133,7 +133,7 @@ const content = {
     subheading: "Experience across Sales, Business Development, B2C, B2B, SaaS, EdTech, Media and Subscription businesses.",
     stats: [
       { tag: "Leadership", value: "10+ Years", label: "Sales & Business Development leadership" },
-      { tag: "Team scale", value: "5 → 1000+", label: "Large-scale sales team building experience" },
+      { tag: "Team scale", value: "0 → 1000+", label: "Large-scale sales team building experience" },
       { tag: "Collections", value: "₹25K → ₹20L", label: "Daily collection scale-up experience" },
       { tag: "Operations", value: "2500+", label: "Field force / large-scale sales operations" },
     ],
